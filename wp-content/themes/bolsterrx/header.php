@@ -33,61 +33,59 @@
    				<!-- Header-Upper -->
         		<div class="header-upper">
         			<div class="container-fluid">
-						<div class="">
-							<div class="clearfix home-menu">
-								<div class="pull-left logo-box">
-									<div class="logo"><?php
-										if ( !empty($logo_array) ) { ?>
-											<div class="site-logo">
-												<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-													<img src="<?php echo $logo_array[0]; ?>" alt="<?php echo $blog_info; ?>" title="<?php echo $blog_info; ?>" />
-												</a>
-											</div><?php
-										} else {
-											if ( ! empty( $blog_info ) ) {
-												if ( is_front_page() && is_home() ) { ?>
-													<h1 class="site-title">
-														<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-															<?php echo $blog_info; ?>
-														</a>
-													</h1><?php
-												} else { ?>
-													<p class="site-title">
-														<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-															<?php echo $blog_info; ?>
-														</a>
-													</p><?php
-												}
+            			<div class="clearfix home-menu">
+							<div class="pull-left logo-box">
+                    			<div class="logo"><?php
+									if ( !empty($logo_array) ) { ?>
+										<div class="site-logo">
+											<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+												<img src="<?php echo $logo_array[0]; ?>" alt="<?php echo $blog_info; ?>" title="<?php echo $blog_info; ?>" />
+											</a>
+										</div><?php
+									} else {
+										if ( ! empty( $blog_info ) ) {
+											if ( is_front_page() && is_home() ) { ?>
+												<h1 class="site-title">
+													<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+														<?php echo $blog_info; ?>
+													</a>
+												</h1><?php
+											} else { ?>
+												<p class="site-title">
+													<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+														<?php echo $blog_info; ?>
+													</a>
+												</p><?php
 											}
-										} ?>
-									</div>
+										}
+									} ?>
 								</div>
-								<div class="nav-outer clearfix">
-									<!--Mobile Navigation Toggler For Mobile-->
-									<div class="mobile-nav-toggler">
-										<span class="icon flaticon-menu-4"></span>
-									</div>
-									<nav class="main-menu mega navbar-expand-md pull-right">
-										<div class="navbar-header">
-											<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-											</button>
-										</div>
-										<div class="navbar-collapse collapse scroll-nav clearfix" id="navbarSupportedContent">
-											<?php
-												wp_nav_menu(
-													array(
-														'theme_location' => 'primary-navigation',
-														'menu_class'     => 'primary-navigation navigation clearfix',
-														'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-													)
-												);
-											?>
-										</div>
-									</nav>
+                    		</div>
+							<div class="nav-outer clearfix">
+								<!--Mobile Navigation Toggler For Mobile-->
+								<div class="mobile-nav-toggler">
+									<span class="icon flaticon-menu-4"></span>
 								</div>
+								<nav class="main-menu mega navbar-expand-md pull-right">
+									<div class="navbar-header">
+										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+									<div class="navbar-collapse collapse scroll-nav clearfix" id="navbarSupportedContent">
+										<?php
+											wp_nav_menu(
+												array(
+													'theme_location' => 'primary-navigation',
+													'menu_class'     => 'primary-navigation navigation clearfix',
+													'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+												)
+											);
+										?>
+									</div>
+								</nav>
 							</div>
 						</div>
 					</div>
